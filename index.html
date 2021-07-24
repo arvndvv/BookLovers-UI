@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+</head>
+
+<body onload="runScript()">
+    <div class="header">
+        <span class="logo">B<span class="expand">ook</span>L<span class="expand">overs</span></span>
+        <span class="extra">
+            <i class="ri-shopping-cart-2-line cart-icon"></i>
+            <i class="ri-menu-line menu-icon" onclick="toggleMenu()">
+        </i>
+        <span class="menu">
+            <strong>Info.</strong>
+            <p>click on My books, to read them</p>
+            <small>Credits</small>
+            <p>Design Inspiration: instagram @ ui.joel</p>
+        </span>
+        </span>
+
+    </div>
+    <div id="landing" class="landing">
+        <div class="heading">
+            <h1>Book</h1>
+            <h4>lovers</h4>
+        </div>
+
+        <div class="img"></div>
+        <div class="next">
+            <i class="ri-arrow-right-line swipper"></i> swipe right
+        </div>
+        <canvas id="confetti" class="confetti"></canvas>
+
+    </div>
+    <div class="home hide" id="home">
+        <span class="search-container">
+            <i class="ri-search-line search-icon"></i>
+            <input type="text" name="" id="search" class="search" placeholder="Find a book" oninput="search(this.value)">
+        </span>
+        <span class="feature">
+            <h3>Books of the day</h3>
+            <span class="book-feature">
+                <div class="data">
+                    <h2>Davinci Code</h2>
+                    <h4>Dan Brown</h4>
+                </div>
+                <div class="img"></div>
+            </span>
+        </span>
+        <div class="row space-between p-standard">
+            <ul class="filter">
+                <li class="filter__ebook" onclick="filterBooks('ebook')">
+                    Ebook
+                </li>
+                <li class="filter__paperback" onclick="filterBooks('paperback')">
+                    Paperback
+                </li>
+                <li class="filter__bestseller" onclick="filterBooks('bestseller')">
+                    Bestsellers
+                </li>
+            </ul>
+            </span>
+            <span>
+                <i class="ri-arrow-left-right-line view-flex" onclick="listViewStyle('flex')"></i>
+                <i class="ri-grid-fill view-grid" onclick="listViewStyle('grid')"></i>
+            </span>
+        </div>
+
+        <div class="book-list">
+
+        </div>
+        <h3 class="p-standard">Books by me</h3>
+        <div class="book-list mine">
+
+        </div>
+
+    </div>
+
+    <script src="confetti.js"></script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
