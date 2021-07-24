@@ -201,7 +201,7 @@ function filterBooks(tag) {
 function search(val) {
     if (val !== '') {
         clearElem('book-list');
-        let regX = new RegExp(val, 'g');
+        let regX = new RegExp(val.toLowerCase(), 'g');
         let newList = [...books, ...myBooks].filter(book => book.title.toLowerCase().match(regX));
         filter.searchedList = newList;
         filter.searching = true;
